@@ -60,10 +60,10 @@ if has('unix')
 endif
 
 "
-" OPTIONAL: Uncomment if you like this behavior
+" OPTIONAL: Toggle based on behavior you want
 "
 " Hack to make undo only undo one word at a time
-" inoremap <Space> <Space><C-g>u
+inoremap <Space> <Space><C-g>u
 
 " Highlight column
 " set cursorcolumn

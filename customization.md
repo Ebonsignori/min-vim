@@ -40,12 +40,27 @@ let g:coc_global_extensions = ['coc-eslint', 'coc-tsserver', 'coc-spell-checker'
 
 ## Config (config.vim)
 
-1. Shared clipboard with system
+1. Shared clipboard with system. If you take this route, all of your copies (yanks) AND deletes overwrite your current copy register that is shared with your system.
+I work around this by using a global clipboard manager, [CopyQ](https://hluk.github.io/CopyQ/).
+CopyQ lets you see your clip history and can be bound to open with a global hotkey, and then use arrow keys to nav to a previous enter paste/select it as your current clip.
+So in a workflow you might delete a line in vim with `dd`, then that line will overwrite your clipboard, then you press the CopyQ hotkey, `down` arrow, `enter` and wa-lah you have your previously copied thing back. (CopyQ is also very useful outside of Vim)
+
+The "vim" way to do things is to copy/paste things to specific register instead, so your copy selections aren't overwritten by deletes. You can also designate a specific buffer, like the key `s` to copy/paste to/from your system clipboard. 
+
 - Don't want? In config.vim comment/remove line 8
 ```
 set clipboard^=unnamed,unnamedplus
 ```
 - Remove lines 29 to 61 under comment "Use system clipboard as default"
+
+2. Use more "friendly" undo.
+If you enter insert mode in vim with `i` and type an entire sentence, and then exit to normal mode with `escape` and want to undo a single word with vim’s undo binding, `u` you’d undo the entire line you just typed.
+Instead I have `u` work in a more intuitive way by just undoing the last word you type. If you don’t want this and want to learn how to undo things the “vim” way (I don’t know how that is done)
+
+- Remove/comment out this line in config.vim
+```
+inoremap <Space> <Space><C-g>u
+```
 
 ## Custom shortcuts (keys.vim)
 
