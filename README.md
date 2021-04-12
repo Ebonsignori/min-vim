@@ -1,20 +1,22 @@
 # Min-vim setup
 
-1. Install [nvim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
-2. Alias vi/vim to nvim in zshrc/bashrc
+1. Install [nvim](https://github.com/neovim/neovim/wiki/Installing-Neovim) for your system
+2. Alias vim to nvim in zshrc/bashrc
 ```
 alias vi='nvim'
 alias v='nvim'
 ```
 3. Install [ag](https://github.com/ggreer/the_silver_searcher#installing) if you want to use it for searching
-4. Copy over vim config from this repo to your system's vim config:
+4. Copy over vim config from this repo to your system's vim config dir:
 ```
 cp -fR ./vim/ ~/.config/nvim/
 ```
-5. Start vim with `vi` or `vim`!
+5. Start vim with `vi` or `vi filename.ext`
+6. Run `:PlugInstall`
+7. Reference keybindings in [mappings.md](./mappings.md) and customizations in [customization.md](./customization.md)
+8. Haz fun
 
-
-Note (possibly obvious): This repo is the source of truth (for now), if you make changes and want to test out your updated config, remember to `cp -fR ./vim/ ~/.config/nvim/` from here.
+Note (possibly obvious): This repo is the source of truth until you grow out of it, if you make changes and want to test out your updated config, remember to `cp -fR ./vim/ ~/.config/nvim/` from here.
 
 # Mappings
 
