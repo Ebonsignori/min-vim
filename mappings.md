@@ -2,6 +2,9 @@
 
 Here is a reference you can use and add to as you learn vim. This really comes in handy at the beginning.
 
+In vim notation,
+`<C-w>s` means `Ctrl+w` followed by a quick `s`
+
 ## Basic
 
 Normal mode: `escape`
@@ -32,6 +35,14 @@ To next character in line `t<char>`
 To previous character in line: `T<char>`
 
 To closing brace/paren/bracket: `%`
+
+Back/Fwd to prev/next location: `<C-o>` / `<C-i>`
+
+
+### Undo/redo
+
+Undo: `u` (if you don't like default undo behavior like me, uncomment #66 in config.vim)
+Redo: `<C-r>`
 
 ### Copy / paste
 
@@ -95,7 +106,9 @@ There are three ways to display and edit files in vim. To keep things simple I r
 
 Windows however, are worth learning for that split view.
 
-Split a window horizontally: `<C-w>s` (<C-w> means Ctrl_+w in vim keybindings)
+(`<C-w>` are window binding prefixes)
+
+Split a window horizontally: `<C-w>s`
 Split vertically: `<C-w>v`
 Close a window: `<C-w>c`
 
@@ -110,6 +123,8 @@ Change surroundings of a block: `cs <A> <B>` where A and B are the symbols to ch
 
 Add surroundings of a block `ys <A>`. In this case the block is whatever navigation chain you specifiy. For instance at the beginning of a word you want to surround with quotes, you could say `ysw"` and the word would suddenly be surrounded by quotes. You could do this to an entire line with `ys$"`. In the middle of a word you could say
 
+You can follow these same patterns to "delete surround" with `ds`
+
 `ctrl+p`: IDE like fuzzy file search. ctrl+p again from this window to search for previous file.
 
 Autoformat Terraform, Json, or autofix JS file with Eslint:
@@ -117,9 +132,17 @@ Autoformat Terraform, Json, or autofix JS file with Eslint:
 
 If you didn't turn off CoC you can jump to next Sytax, Eslint, and spelling error (in that priority) with `[g` and `]g`. You can also rename a symbol (variable and occurances in same file) with `<leader>rn`
 
+Change casing of word with `cr`:
+- PascalCase: `m`
+- camelCase: `c`
+- snake_case: `s`
+- SCREAMING_SNAKE: `u`
+- kebab-case: `k`
+- space case: `<space>`
+- dot.case: `.`
+- Title Case: `t`
 
 ## Custom
-
 
 `shift+k`: jump up
 `shift+j`: jump down
