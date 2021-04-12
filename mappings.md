@@ -8,6 +8,7 @@ In vim notation,
 ## Basic
 
 Normal mode: `escape`
+
 Insert mode:
 - `i`: insert at cursor
 - `a`: insert after cursor
@@ -22,46 +23,59 @@ Everything afterwards is assumed to be in normal mode. You spend most of your ti
 
 ### Nav
 
-Forward a word: `w`
-Backwards a word: `b`
-End of line: `$`
-Start of line: `0`
-Top of page: `gg`
-Bottom of page: `G`
+- Forward a word: `w`
 
-To specific line: `<number>G` or type `:<number>, <enter>`
+- Backwards a word: `b`
 
-To next character in line `t<char>`
-To previous character in line: `T<char>`
+- End of line: `$`
 
-To closing brace/paren/bracket: `%`
+- Start of line: `0`
 
-Back/Fwd to prev/next location: `<C-o>` / `<C-i>`
+- Top of page: `gg`
+
+- Bottom of page: `G`
+
+- To specific line: `<number>G` or type `:<number>, <enter>`
+
+- To next character in line `t<char>`
+
+- To previous character in line: `T<char>`
+
+- To closing brace/paren/bracket: `%`
+
+- Back/Fwd to prev/next location: `<C-o>` / `<C-i>`
 
 
 ### Undo/redo
 
-Undo: `u` (if you don't like default undo behavior like me, uncomment #66 in config.vim)
-Redo: `<C-r>`
+- Undo: `u` (if you don't like default undo behavior like me, uncomment #66 in config.vim)
+
+- Redo: `<C-r>`
 
 ### Copy / paste
 
-Copy: `y`
-Copy line: `yy`
+- Copy: `y`
 
-Paste: `p`
+- Copy line: `yy`
+
+- Paste: `p`
 (or insert mode and ctrl_+v if the habit is too strong to break)
 
 ### Delete
 
-Delete character: `x`
-Delete line: `dd`
-Delete word: `dw`
-Delete to end of line: `d$`
-Delete inside of parens: `di"`
-"Think delete _in_ parens"
-Delete inside of quotes: `di'`
-Delete inside of backticks, etc, etc: `di\``
+- Delete character: `x`
+
+- Delete line: `dd`
+
+- Delete word: `dw`
+
+- Delete to end of line: `d$`
+
+- Delete inside of parens: `di"` (Think delete _in_ parens)
+
+- Delete inside of quotes: `di'`
+
+- Delete inside of backticks, etc, etc: di`
 
 ### Chaining
 
@@ -74,7 +88,7 @@ This is interesting. It is supposed to be a more effective way to enter insert m
 To delete inside of quotes and start typing in insert mode: `ci'`
 "Think change in quotes"
 
-Change word: `cw`
+- Change word: `cw`
 
 etc
 
@@ -92,9 +106,9 @@ You can repeat most commands, insert texts, and more with this button
 
 Search with `/`
 
-Jump to next match with `n`
+- Jump to next match with `n`
 
-Jump to prev match with `N`
+- Jump to prev match with `N`
 
 ### Search replace example
 
@@ -108,9 +122,11 @@ Windows however, are worth learning for that split view.
 
 (`<C-w>` are window binding prefixes)
 
-Split a window horizontally: `<C-w>s`
-Split vertically: `<C-w>v`
-Close a window: `<C-w>c`
+- Split a window horizontally: `<C-w>s`
+
+- Split vertically: `<C-w>v`
+
+- Close a window: `<C-w>c`
 
 This is technically "custom", but you can nav between windows with Ctrl + j/k/h/l
 
@@ -133,6 +149,7 @@ Autoformat Terraform, Json, or autofix JS file with Eslint:
 If you didn't turn off CoC you can jump to next Sytax, Eslint, and spelling error (in that priority) with `[g` and `]g`. You can also rename a symbol (variable and occurances in same file) with `<leader>rn`
 
 Change casing of word with `cr`:
+
 - PascalCase: `m`
 - camelCase: `c`
 - snake_case: `s`
@@ -144,13 +161,13 @@ Change casing of word with `cr`:
 
 ## Custom
 
-`shift+k`: jump up
-`shift+j`: jump down
+- `shift+k`: jump up
+- `shift+j`: jump down
 
-`<C-s>`: save file (useful if you turn off auto-save)
+- `<C-s>`: save file (useful if you turn off auto-save)
 
-`>` indent file "right" in normal or visual mode (for a block of lines)
-`<` indent file "left"
+- `>` indent file "right" in normal or visual mode (for a block of lines)
+- `<` indent file "left"
 
 
 
