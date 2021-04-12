@@ -1,4 +1,6 @@
-I'll walk through each file and show where you can go to remove/add things I've included.
+# Customizations
+
+Let's go through each file and find where to remove/add things.
 
 ## Init.vim
 
@@ -9,7 +11,6 @@ This is the entry point and loads all the config files that are broken up for si
 - Don't want? In plugins.vim remove/comment out line 38:
 ```
 Plug '907th/vim-auto-save'
-
 ```
 - Remove/comment lines 80-87 (everything under "Autosave plugin config")
 
@@ -19,7 +20,6 @@ Plug '907th/vim-auto-save'
 ```
 Plug 'scrooloose/nerdtree' |
  \ Plug 'Xuyuanp/nerdtree-git-plugin'
-
 ```
 - Uncomment lines 117-132 (everything under "Nerdtree Config")
 

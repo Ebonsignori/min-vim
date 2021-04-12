@@ -5,7 +5,6 @@
 ```
 alias vi='nvim'
 alias v='nvim'
-
 ```
 3. Install [ag](https://github.com/ggreer/the_silver_searcher#installing) if you want to use it for searching
 4. Copy over vim config from this repo to your system's vim config:
