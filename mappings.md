@@ -141,8 +141,9 @@ This is technically "custom", but you can nav between windows with Ctrl + j/k/h/
 
 ## Plugins
 
-Jump to next/prev change in a git-tracked file:
-`[h` or `]h`
+Jump to next/prev change in a git-tracked file: `[h` or `]h`
+
+Toggle commented line or visual block of code: `<leader>/`
 
 ### Surround.vim
 
