@@ -7,14 +7,15 @@ alias vi='nvim'
 alias v='nvim'
 ```
 3. Install [ag](https://github.com/ggreer/the_silver_searcher#installing) if you want to use it for searching
-4. Copy over vim config from this repo to your system's vim config dir:
+4. Install `xsel` for linux (on Ubuntu I can just `sudo apt-get install -y xsel`)
+5. Copy over vim config from this repo to your system's vim config dir:
 ```
 cp -fR ./vim/ ~/.config/nvim/
 ```
-5. Start vim with `vi` or `vi filename.ext`
-6. Run `:PlugInstall`
-7. Reference keybindings in [mappings.md](./mappings.md) and customizations in [customization.md](./customization.md)
-8. Haz fun
+6. Start vim with `vi` or `vi filename.ext`
+7. Run `:PlugInstall`
+8. Reference keybindings in [mappings.md](./mappings.md) and customizations in [customization.md](./customization.md)
+9. Haz fun
 
 Note (possibly obvious): This repo is the source of truth until you grow out of it, if you make changes and want to test out your updated config, remember to `cp -fR ./vim/ ~/.config/nvim/` from here.
 
@@ -24,7 +25,10 @@ For a reference sheet of basics, the included plugins, and custom keybindings se
 
 # Customize
 
-To get an overview of what is here and a place to check when you run into something you don't want and think "I don't want this junk". Checkout [customization.md](./customization.md) and there will likely be steps on how to remove it. Such as auto-saving, spellcheck, eslint, JS intellisense, shared clipboard, and window navigation. 
 
-There are also a few things that you can add like searching with Ag, file tree browser, rainbow parens, version control, markdown preview, and a more intuitive "undo".
+When you want to start tweaking your vim config, this is a reference to what is there and may serve as an entry point when you run into something you don't want and think "I don't want this junk".
+
+[customization.md](./customization.md)
+
+There are also a few misc things that that are commented out that you can add like rainbow parens and markdown preview.
 

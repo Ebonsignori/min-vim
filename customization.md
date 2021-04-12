@@ -1,66 +1,20 @@
 # Customizations
 
-Let's go through each file and find where to remove/add things.
-
 ## Init.vim
 
 This is the entry point and loads all the config files that are broken up for simplicity
 
-## Plugins (plugins.vim)
-1. Auto-save: auto saves files after any changes made
-- Don't want? In plugins.vim remove/comment out line 38:
-```
-Plug '907th/vim-auto-save'
-```
-- Remove/comment lines 80-87 (everything under "Autosave plugin config")
+## Plugins.vim
 
-2. Nerdtree: Directory tree visualizer you'd get in an IDE. Toggle with Ctrl+b. Modify/create files with "m". Open file in window with "o". Open file in split window pane with "s". 
+Lists plugins that will be installed with `:PlugInstall` (run anytime you add a new plugin) and their configs.
 
-- Do want? In plugins.vim uncomment these lines:
-```
-Plug 'scrooloose/nerdtree' |
- \ Plug 'Xuyuanp/nerdtree-git-plugin'
-```
-- Uncomment lines 117-132 (everything under "Nerdtree Config")
+## coc.vim
 
-3. Coc: In-line eslint errors, JS errors, and spellchecking. Plus ability to "autofix" eslint errors with `<leader>fm` hotkey.
-- Don't want? In plugins.vim remove/comment out lines 54-55:
-```
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-eslint', 'coc-tsserver', 'coc-spell-checker']
-```
-- Remove/comment lines 162-174 (everything under "CoC Config")
+The CoC plugin has so much config that it has its own file
 
-4. Ag: fuzzy search within all files not .gitignored or in `node_modules`?
+## Config.vim
 
-- Uncomment all of the optional stuff under the Fzf config section in plugins.vim
-- You may notice you can shortcut `<leader>b` to fuzzy search open buffers.
-
-5. If you want rainbow parens (different colors match different pairs) uncomment `" Plug 'luochen1990/rainbow'`  in plugins.vim and add line `let g:rainbow_active = 1` somewhere, anywhere really.
-
-## Config (config.vim)
-
-1. Shared clipboard with system. If you take this route, all of your copies (yanks) AND deletes overwrite your current copy register that is shared with your system.
-I work around this by using a global clipboard manager, [CopyQ](https://hluk.github.io/CopyQ/).
-CopyQ lets you see your clip history and can be bound to open with a global hotkey, and then use arrow keys to nav to a previous enter paste/select it as your current clip.
-So in a workflow you might delete a line in vim with `dd`, then that line will overwrite your clipboard, then you press the CopyQ hotkey, `down` arrow, `enter` and wa-lah you have your previously copied thing back. (CopyQ is also very useful outside of Vim)
-
-The "vim" way to do things is to copy/paste things to specific register instead, so your copy selections aren't overwritten by deletes. You can also designate a specific buffer, like the key `s` to copy/paste to/from your system clipboard. 
-
-- Don't want? In config.vim comment/remove line 8
-```
-set clipboard^=unnamed,unnamedplus
-```
-- Remove lines 29 to 61 under comment "Use system clipboard as default"
-
-2. Use more "friendly" undo.
-If you enter insert mode in vim with `i` and type an entire sentence, and then exit to normal mode with `escape` and want to undo a single word with vim’s undo binding, `u` you’d undo the entire line you just typed.
-Instead I have `u` work in a more intuitive way by just undoing the last word you type. If you don’t want this and want to learn how to undo things the “vim” way (I don’t know how that is done)
-
-- Remove/comment out this line in config.vim
-```
-inoremap <Space> <Space><C-g>u
-```
+Base vim config and additional configs like "friendly" undo and shared system keyboard.
 
 ## Custom shortcuts (keys.vim)
 
@@ -70,8 +24,12 @@ inoremap <Space> <Space><C-g>u
 
 3. Indent visually selected blocks or current line with `<` / `>`. You can comment out 16-21 in keys.vim if you don't like this.
 
-4. `<leader>fm` will autoformat .json and terraform files
+4. `<leader>fm` will auto-format .json and terraform files
+
+## Tabs.vim
+
+Everything you need to know about tabs is in mappings.md 
 
 ## Theme (theme.vim)
 
-1. You can replace this with a different theme, or uncomment everything after loading the termguicolors to see how your default theme looks and works without it.
+You can replace this with a different theme, or uncomment everything after loading the `termguicolors` to see how your default theme looks and works without it.

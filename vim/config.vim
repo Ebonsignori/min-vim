@@ -21,9 +21,12 @@ set ignorecase
 set smartcase
 " Don't hide quotes and symbols
 set conceallevel=0
+" I can't get this to turn off, so might as well put it here to show its on
+set cursorline
+" Highlight column
+set cursorcolumn
 
-" For filetype-specific configs (see keys.vim)
-filetype plugin on
+
 
 " Use system clipboard as default
 if has('unix')
@@ -59,12 +62,11 @@ if has('unix')
   endif
 endif
 
-"
-" OPTIONAL: Toggle based on behavior you want
-"
 " Hack to make undo only undo one word at a time
 inoremap <Space> <Space><C-g>u
 
-" Highlight column
-" set cursorcolumn
+" For filetype-specific configs (see keys.vim)
+filetype plugin on
+autocmd FileType javascript setlocal shiftwidth=2
+
 
