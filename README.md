@@ -24,7 +24,5 @@ For a reference sheet of basics, the included plugins, and custom keybindings se
 
 # Customize
 
-To get an overview of what is here and a place to check when you run into something you don't want and think "I don't want this junk". Checkout [customization.md](./customization.md) and there will likely be steps on how to remove it. Such as auto-saving, spellcheck, eslint, JS intellisense, shared clipboard, and window navigation. 
-
-There are also a few things that you can add like searching with Ag, file tree browser, rainbow parens, version control, markdown preview, and a more intuitive "undo".
+To get an overview of what is here and a place to check when you run into something you don't want and think "I don't want this junk". Checkout [customization.md](./customization.md) and there will likely be steps on how to remove it. Such as auto-saving, spellcheck, eslint, JS intellisense, shared clipboard, window navigation, searching with Ag, file tree browser, rainbow parens, version control, markdown preview, and a more intuitive "undo".
 

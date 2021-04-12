@@ -28,10 +28,15 @@ autocmd Filetype terraform nmap <leader>fm :TerraformFmt<CR>
 " Autoformat .json file with <leader>fm 
 autocmd Filetype json nmap <leader>fm :%!jq<CR>
 
-" 
-" Optional - feel free to comment out if you don't like
-"
 " Up and down jumps with shift K/J - this feels very intuitive
 nnoremap <silent> K <C-u>
 nnoremap <silent> J <C-d>
+
+" Move lines up/down
+nnoremap <M-j> :m .+1<CR>==
+nnoremap <M-k> :m .-2<CR>==
+inoremap <M-j> <Esc>:m .+1<CR>==gi
+inoremap <M-k> <Esc>:m .-2<CR>==gi
+vnoremap <M-j> :m '>+1<CR>gv=gv
+vnoremap <M-k> :m '<-2<CR>gv=gv
 
